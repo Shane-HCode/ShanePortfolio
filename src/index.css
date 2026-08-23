@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: #050608;
+  color: #e7ecf3;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #050608;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #00e5ff, #5b5bf6);
+  border-radius: 10px;
+}
+
+:focus-visible {
+  outline: 2px solid #00e5ff;
+  outline-offset: 3px;
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/[0.04] backdrop-blur-xl border border-white/[0.08];
+  }
+  .glass-strong {
+    @apply bg-white/[0.06] backdrop-blur-2xl border border-white/[0.12];
+  }
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-cyan via-cyan-soft to-indigo-soft;
+  }
+  .section-eyebrow {
+    @apply font-mono text-xs tracking-[0.3em] uppercase text-cyan-soft/80;
+  }
+  .btn-glow {
+    @apply relative inline-flex items-center gap-2 px-7 py-3 rounded-full font-medium text-sm
+      bg-gradient-to-r from-cyan to-indigo text-void shadow-[0_0_30px_rgba(0,229,255,0.35)]
+      transition-transform duration-300 hover:scale-105 hover:shadow-[0_0_45px_rgba(0,229,255,0.55)];
+  }
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 px-7 py-3 rounded-full font-medium text-sm
+      border border-white/15 text-white/90 backdrop-blur-md transition-all duration-300
+      hover:border-cyan/60 hover:text-cyan-soft;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
