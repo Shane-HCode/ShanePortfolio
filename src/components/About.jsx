@@ -24,14 +24,14 @@ export default function About() {
 
   return (
     <section id="about" className="relative px-6 py-32 md:px-12">
-      <div className="max-w-6xl mx-auto grid md:grid-cols-[0.85fr_1.15fr] gap-16 items-center">
+      <div className="max-w-6xl mx-auto grid lg:grid-cols-[0.85fr_1.15fr] gap-16 items-center">
         {/* Photo */}
         <motion.div
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.4 }}
           variants={fadeUp}
-          className="relative w-64 mx-auto md:mx-0 sm:w-80"
+          className="relative w-[280px] mx-auto md:w-[400px] lg:w-80"
         >
           <div
             ref={cardRef}
@@ -40,7 +40,7 @@ export default function About() {
             style={{ transform: `rotateX(${tilt.x}deg) rotateY(${tilt.y}deg)` }}
             className="relative aspect-[4/5] rounded-3xl glass-strong p-3 transition-transform duration-300 ease-out [transform-style:preserve-3d]"
           >
-            <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-cyan/20 to-indigo/20 blur-2xl -z-10 animate-pulse-slow" />
+            <div className="absolute -inset-5 rounded-[2rem] bg-gradient-to-br from-cyan/20 to-indigo/20 blur-2xl -z-10 animate-pulse-slow" />
             <img
               src="/profile.jpg"
               alt="Portrait"
@@ -48,7 +48,7 @@ export default function About() {
                 e.currentTarget.style.display = 'none'
                 e.currentTarget.nextSibling.style.display = 'flex'
               }}
-              className="object-cover w-full h-full rounded-2xl"
+              className="object-cover rounded-2xl"
             />
             <div
               className="items-center justify-center hidden w-full h-full px-4 font-mono text-xs text-center rounded-2xl bg-gradient-to-br from-panel to-void text-white/30"
@@ -57,7 +57,7 @@ export default function About() {
               <br />
               <span className="block mt-1 text-cyan-soft">/public/profile.jpg</span>
             </div>
-            <div className="absolute px-4 py-2 font-mono text-xs top-6 -right-6 glass rounded-2xl text-cyan-soft animate-float">
+            <div className="absolute px-3 py-2 font-mono md:text-lg lg:text-sm top-1 md:top-4 -right-14 md:-right-16 lg:-right-6 glass rounded-2xl text-cyan-soft animate-float">
               &lt;/&gt; open to work
             </div>
           </div>
@@ -70,7 +70,7 @@ export default function About() {
             whileInView="show"
             viewport={{ once: true }}
             variants={fadeUp}
-            className="section-eyebrow"
+            className="text-base md:text-2xl lg:text-base section-eyebrow"
           >
             About
           </motion.span>
@@ -81,7 +81,7 @@ export default function About() {
             whileInView="show"
             viewport={{ once: true }}
             variants={fadeUp}
-            className="mt-4 text-4xl font-semibold leading-tight text-white font-display md:text-5xl"
+            className="mt-4 text-4xl font-semibold leading-tight text-white md:mt-6 lg:mt-4 font-display md:text-5xl"
           >
             Where design
             <span className="text-gradient"> systems</span> meet
@@ -94,7 +94,7 @@ export default function About() {
             whileInView="show"
             viewport={{ once: true }}
             variants={fadeUp}
-            className="mt-6 text-lg leading-relaxed text-white/60 font-body"
+            className="mt-6 text-lg leading-relaxed text-justify md:text-2xl lg:text-lg text-white/60 font-body"
           >
             I'm a UI/UX designer and frontend developer who takes ideas from a blank
             Figma canvas all the way to production ready React. I care about the
@@ -108,7 +108,7 @@ export default function About() {
             whileInView="show"
             viewport={{ once: true }}
             variants={fadeUp}
-            className="mt-4 text-lg leading-relaxed text-white/60 font-body"
+            className="mt-4 text-lg leading-relaxed text-justify md:text-2xl lg:text-lg text-white/60 font-body"
           >
             Lately that means building immersive, motion-driven interfaces with
             Three.js and Framer Motion, pushing what a browser tab can feel like.
@@ -120,16 +120,16 @@ export default function About() {
             whileInView="show"
             viewport={{ once: true }}
             variants={fadeUp}
-            className="grid max-w-md grid-cols-3 gap-4 mt-8"
+            className="grid grid-cols-3 gap-4 mt-12"
           >
             {[
-              ['4+', 'Years crafting UI'],
-              ['40+', 'Products shipped'],
-              ['12', 'Design systems'],
+              ['2+', 'Years crafting UI'],
+              ['5+', 'Projects delivered'],
+              ['24/7', 'Curiosity at work'],
             ].map(([n, l]) => (
               <div key={l} className="px-4 py-4 text-center glass rounded-xl">
-                <div className="text-2xl font-semibold font-display text-gradient">{n}</div>
-                <div className="text-[11px] text-white/50 mt-1 font-body">{l}</div>
+                <div className="text-2xl font-semibold md:text-4xl lg:text-2xl font-display text-gradient">{n}</div>
+                <div className="text-[13px] md:text-[17px] lg:text-[13px] text-white/50 mt-2 font-body">{l}</div>
               </div>
             ))}
           </motion.div>
