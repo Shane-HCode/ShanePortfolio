@@ -26,14 +26,14 @@ const GROUPS = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="relative py-32 px-6 md:px-12">
+    <section id="skills" className="relative px-6 py-32 md:px-12">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
+        <div className="mb-16 text-center">
           <motion.span
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="section-eyebrow"
+            className="text-base md:text-2xl lg:text-base section-eyebrow"
           >
             Toolkit
           </motion.span>
@@ -42,13 +42,13 @@ export default function Skills() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="mt-4 font-display font-semibold text-4xl md:text-5xl text-white"
+            className="mt-4 text-3xl font-semibold text-white md:text-5xl lg:text-4xl font-display"
           >
             What I bring to the table
           </motion.h2>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {GROUPS.map(({ icon: Icon, title, items }, i) => (
             <motion.div
               key={title}
@@ -57,15 +57,15 @@ export default function Skills() {
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
               whileHover={{ y: -8 }}
-              className="glass rounded-2xl p-6 group hover:border-cyan/40 transition-colors duration-300"
+              className="p-6 transition-colors duration-300 glass rounded-2xl group hover:border-cyan/40"
             >
-              <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-cyan/20 to-indigo/20 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
-                <Icon size={20} className="text-cyan-soft" />
+              <div className="flex items-center justify-center w-12 h-12 mb-5 transition-transform duration-300 md:w-14 md:h-14 lg:w-12 lg:h-12 rounded-xl bg-gradient-to-br from-cyan/20 to-indigo/20 group-hover:scale-110">
+                <Icon className=" text-cyan-soft" />
               </div>
-              <h3 className="font-display font-medium text-lg text-white mb-4">{title}</h3>
+              <h3 className="mb-4 text-2xl font-medium text-white md:text-4xl lg:text-2xl font-display">{title}</h3>
               <ul className="space-y-2">
                 {items.map((item) => (
-                  <li key={item} className="text-sm text-white/55 font-body flex items-center gap-2">
+                  <li key={item} className="flex items-center gap-2 text-lg md:text-2xl lg:text-base text-white/55 font-body">
                     <span className="w-1 h-1 rounded-full bg-cyan-soft/70" />
                     {item}
                   </li>

@@ -81,7 +81,7 @@ export default function About() {
             whileInView="show"
             viewport={{ once: true }}
             variants={fadeUp}
-            className="mt-4 text-4xl font-semibold leading-tight text-white md:mt-6 lg:mt-4 font-display md:text-5xl"
+            className="mt-4 text-4xl font-semibold leading-tight text-white md:text-5xl md:mt-6 lg:mt-4 font-display "
           >
             Where design
             <span className="text-gradient"> systems</span> meet
