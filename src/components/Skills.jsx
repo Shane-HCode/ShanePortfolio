@@ -57,7 +57,7 @@ export default function Skills() {
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
               whileHover={{ y: -8 }}
-              className="p-6 transition-colors duration-300 glass rounded-2xl group hover:border-cyan/40"
+              className="w-5/6 max-w-sm p-6 mx-auto transition-colors duration-300 glass rounded-2xl group hover:border-cyan/40 sm:w-full sm:max-w-none sm:mx-0"
             >
               <div className="flex items-center justify-center w-12 h-12 mb-5 transition-transform duration-300 md:w-14 md:h-14 lg:w-12 lg:h-12 rounded-xl bg-gradient-to-br from-cyan/20 to-indigo/20 group-hover:scale-110">
                 <Icon className=" text-cyan-soft" />
@@ -65,7 +65,7 @@ export default function Skills() {
               <h3 className="mb-4 text-2xl font-medium text-white md:text-4xl lg:text-2xl font-display">{title}</h3>
               <ul className="space-y-2">
                 {items.map((item) => (
-                  <li key={item} className="flex items-center gap-2 text-lg md:text-2xl lg:text-base text-white/55 font-body">
+                  <li key={item} className="flex items-center gap-2 text-xl md:text-2xl lg:text-base text-white/55 font-body">
                     <span className="w-1 h-1 rounded-full bg-cyan-soft/70" />
                     {item}
                   </li>
