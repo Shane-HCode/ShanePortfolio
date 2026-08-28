@@ -96,7 +96,7 @@ export default function About() {
             variants={fadeUp}
             className="mt-6 text-lg leading-relaxed text-justify md:text-2xl lg:text-lg text-white/60 font-body"
           >
-            I'm a UI/UX designer and frontend developer who takes ideas from a blank
+            I'm a UI/UX Designer and Web Developer who takes ideas from a blank
             Figma canvas all the way to production ready React. I care about the
             details most people scroll past, the easing curve on a hover state, the
             way a glass panel catches light, the millisecond a page feels instant.
