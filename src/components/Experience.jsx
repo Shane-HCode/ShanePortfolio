@@ -57,16 +57,16 @@ export default function Experience() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.4 }}
               transition={{ duration: 0.6, delay: i * 0.15 }}
-              className={`relative mb-14 md:w-1/2 ${
-                i % 2 === 0 ? 'md:pr-12 md:text-right md:ml-0' : 'md:pl-12 md:ml-[50%]'
+              className={`relative mb-14 md:w-[400px] lg:w-1/2 ${
+                i % 2 === 0 ? 'md:pr-12 lg:text-right md:ml-0' : 'md:pl-12 md:ml-[50%]'
               }`}
             >
               <span className="absolute -left-8 md:left-auto md:right-auto top-1 w-3 h-3 rounded-full bg-cyan shadow-[0_0_16px_rgba(0,229,255,0.7)] md:hidden" />
               <div className="p-6 transition-colors duration-300 glass rounded-2xl hover:border-cyan/40">
-                <span className="font-mono text-md md:text-lg lg:text-sm text-cyan-soft">{item.period}</span>
-                <h3 className="mt-2 text-xl font-semibold text-white md:text-xl lg:text-xl font-display">{item.role}</h3>
-                <div className="mt-2 text-[18px] md:text-[20px] lg:text-md text-white/50 font-body">{item.company}</div>
-                <p className="mt-3 text-[16px] lg:text-[15px] md:text-[18px] leading-relaxed text-white/55 font-body">{item.desc}</p>
+                <span className="font-mono text-md md:text-xl lg:text-sm text-cyan-soft">{item.period}</span>
+                <h3 className="mt-2 text-xl font-semibold text-white md:text-2xl lg:text-xl font-display">{item.role}</h3>
+                <div className="mt-2 text-[18px] md:text-[22px] lg:text-md text-white/50 font-body">{item.company}</div>
+                <p className="mt-3 text-[16px] lg:text-[15px] md:text-[20px] leading-relaxed text-white/55 font-body">{item.desc}</p>
               </div>
             </motion.div>
           ))}
