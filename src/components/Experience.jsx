@@ -2,35 +2,37 @@ import { motion } from 'framer-motion'
 
 const TIMELINE = [
   {
-    role: 'Senior UI/UX & Frontend Designer',
-    company: 'Nimbus Studio',
-    period: '2023 — Present',
-    desc: 'Leading design systems and frontend architecture for enterprise SaaS products, mentoring a team of four.',
+    role: 'B.Sc. (Hons) in Information Technology & Management',
+    company: 'University of Moratuwa',
+    period: '2026 — Present',
+    desc: 'Currently pursuing an undergraduate degree in Information Technology & Management, with a focus on technology, software development, business, and information systems.',
   },
+
   {
-    role: 'Product Designer / Frontend Developer',
-    company: 'Lumen Labs',
-    period: '2021 — 2023',
-    desc: 'Owned end-to-end design and implementation for three flagship consumer apps.',
+    role: 'BCS Higher Education Qualification – Postgraduate Diploma',
+    company: 'British Computer Society (BCS)',
+    period: 'Completed 2026',
+    desc: 'Completed the BCS Higher Education Qualification Postgraduate Diploma, strengthening my foundation in computing and software development.',
   },
+
   {
-    role: 'UI Designer',
-    company: 'Freelance',
-    period: '2019 — 2021',
-    desc: 'Partnered with early-stage startups on brand identity, landing pages, and interactive prototypes.',
+    role: 'GCE Advanced & Ordinary Level',
+    company: "S. Thomas' College",
+    period: '2011 — 2023',
+    desc: 'Completed GCE Advanced Level with 3 A passes and GCE Ordinary Level with 8 A passes and 1 B pass.',
   },
 ]
 
 export default function Experience() {
   return (
-    <section id="experience" className="relative py-32 px-6 md:px-12">
+    <section id="experience" className="relative px-6 py-32 md:px-12">
       <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-16">
+        <div className="mb-16 text-center">
           <motion.span
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="section-eyebrow"
+            className="text-base md:text-xl lg:text-base section-eyebrow"
           >
             Journey
           </motion.span>
@@ -39,14 +41,14 @@ export default function Experience() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="mt-4 font-display font-semibold text-4xl md:text-5xl text-white"
+            className="mt-4 text-4xl font-semibold text-white md:text-4xl lg:text-5xl font-display"
           >
             Where I've been
           </motion.h2>
         </div>
 
         <div className="relative pl-8 md:pl-0">
-          <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-cyan/50 via-indigo/30 to-transparent md:-translate-x-1/2" />
+          <div className="absolute top-0 bottom-0 left-0 w-px md:left-1/2 bg-gradient-to-b from-cyan/50 via-indigo/30 to-transparent md:-translate-x-1/2" />
 
           {TIMELINE.map((item, i) => (
             <motion.div
@@ -60,11 +62,11 @@ export default function Experience() {
               }`}
             >
               <span className="absolute -left-8 md:left-auto md:right-auto top-1 w-3 h-3 rounded-full bg-cyan shadow-[0_0_16px_rgba(0,229,255,0.7)] md:hidden" />
-              <div className="glass rounded-2xl p-6 hover:border-cyan/40 transition-colors duration-300">
-                <span className="font-mono text-xs text-cyan-soft">{item.period}</span>
-                <h3 className="font-display font-semibold text-xl text-white mt-2">{item.role}</h3>
-                <div className="text-white/50 text-sm font-body mt-1">{item.company}</div>
-                <p className="text-white/55 text-sm font-body mt-3 leading-relaxed">{item.desc}</p>
+              <div className="p-6 transition-colors duration-300 glass rounded-2xl hover:border-cyan/40">
+                <span className="font-mono text-md md:text-lg lg:text-sm text-cyan-soft">{item.period}</span>
+                <h3 className="mt-2 text-xl font-semibold text-white md:text-xl lg:text-xl font-display">{item.role}</h3>
+                <div className="mt-2 text-[18px] md:text-[20px] lg:text-md text-white/50 font-body">{item.company}</div>
+                <p className="mt-3 text-[16px] lg:text-[15px] md:text-[18px] leading-relaxed text-white/55 font-body">{item.desc}</p>
               </div>
             </motion.div>
           ))}

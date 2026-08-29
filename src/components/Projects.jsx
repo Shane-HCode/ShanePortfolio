@@ -123,7 +123,7 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="mt-4 text-4xl font-semibold text-white font-display md:text-4xl lg:text-5xl"
+              className="mt-4 text-4xl font-semibold text-white md:text-4xl lg:text-5xl font-display"
             >
               Projects worth a
               <span className="text-gradient"> second look</span>
