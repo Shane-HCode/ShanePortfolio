@@ -86,14 +86,14 @@ function ProjectCard({ project, index }) {
       </div>
 
       <div className="p-7">
-        <span className="text-[13px] md:text-md section-eyebrow">{project.tag}</span>
-        <h3 className="mt-2 text-2xl font-semibold text-white font-display">{project.title}</h3>
-        <p className="mt-3 leading-relaxed text-md text-white/55 font-body">{project.desc}</p>
+        <span className="text-[13px] md:text-[17px] lg:text-md section-eyebrow">{project.tag}</span>
+        <h3 className="mt-2 text-2xl font-semibold text-white md:text-3xl lg:text-2xl font-display">{project.title}</h3>
+        <p className="mt-3 leading-relaxed text-md md:text-lg lg:text-md text-white/55 font-body">{project.desc}</p>
         <div className="flex flex-wrap gap-2 mt-5">
           {project.stack.map((s) => (
             <span
               key={s}
-              className="text-[14px] md:text-[12px] font-mono px-3 py-1 rounded-full bg-white/5 border border-white/10 text-white/60"
+              className="text-[14px] lg:text-[12px] font-mono px-3 py-1 rounded-full bg-white/5 border border-white/10 text-white/60"
             >
               {s}
             </span>
@@ -114,7 +114,7 @@ export default function Projects() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-base md:text-2xl lg:text-base section-eyebrow"
+              className="text-base md:text-xl lg:text-base section-eyebrow"
             >
               Selected Work
             </motion.span>
@@ -123,7 +123,7 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="mt-4 text-4xl font-semibold text-white font-display md:text-5xl"
+              className="mt-4 text-4xl font-semibold text-white font-display md:text-4xl lg:text-5xl"
             >
               Projects worth a
               <span className="text-gradient"> second look</span>
@@ -134,7 +134,7 @@ export default function Projects() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="max-w-sm text-lg lg:text-md text-white/50 font-body"
+            className="max-w-sm text-lg md:text-xl lg:text-md text-white/50 font-body"
           >
             A mix of product design and development, chosen for
             the problems they solved.
