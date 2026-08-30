@@ -89,6 +89,7 @@ export default function Contact() {
                   key={label}
                   href={href}
                   aria-label={label}
+                  target="_blank"
                   className="flex items-center justify-center transition-colors rounded-full w-9 h-9 md:w-12 md:h-12 lg:w-9 lg:h-9 glass text-white/60 hover:text-cyan-soft hover:border-cyan/40"
                 >
                   <Icon size={15} />
