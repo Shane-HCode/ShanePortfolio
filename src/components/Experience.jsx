@@ -65,7 +65,7 @@ export default function Experience() {
               <div className="p-6 transition-colors duration-300 glass rounded-2xl hover:border-cyan/40">
                 <span className="font-mono text-md md:text-xl lg:text-sm text-cyan-soft">{item.period}</span>
                 <h3 className="mt-2 text-xl font-semibold text-white md:text-2xl lg:text-xl font-display">{item.role}</h3>
-                <div className="mt-2 text-[18px] md:text-[22px] lg:text-md text-white/50 font-body">{item.company}</div>
+                <div className="mt-2 text-[18px] md:text-[22px] lg:text-[18px] text-white/50 font-body">{item.company}</div>
                 <p className="mt-3 text-[16px] lg:text-[15px] md:text-[20px] leading-relaxed text-white/55 font-body">{item.desc}</p>
               </div>
             </motion.div>
