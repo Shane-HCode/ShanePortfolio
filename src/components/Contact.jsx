@@ -9,10 +9,8 @@ const SOCIALS = [
   { icon: Instagram, href: 'https://www.instagram.com/_shanehenri/', label: 'Instagram' },
 ]
 
-// API URL - changes based on environment
-const API_URL = import.meta.env.DEV 
-  ? 'http://localhost:5000/api'  // Development
-  : 'https://your-production-url.com/api'  // Production (update when deploying)
+// Use relative path for API - works locally and in production
+const API_URL = '/api'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -30,7 +28,6 @@ export default function Contact() {
   const handleChange = (e) => {
     const { name, value } = e.target
     setFormData(prev => ({ ...prev, [name]: value }))
-    // Clear field error when user types
     if (status.fieldErrors[name]) {
       setStatus(prev => ({
         ...prev,
@@ -46,9 +43,7 @@ export default function Contact() {
     try {
       const response = await fetch(`${API_URL}/contact`, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
       })
 
@@ -61,12 +56,7 @@ export default function Contact() {
         throw new Error(data.message || 'Failed to send message')
       }
 
-      // Success
-      setStatus(prev => ({
-        ...prev,
-        sent: true,
-        loading: false
-      }))
+      setStatus(prev => ({ ...prev, sent: true, loading: false }))
       setFormData({ name: '', email: '', message: '' })
 
     } catch (error) {
