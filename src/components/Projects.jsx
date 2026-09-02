@@ -1,9 +1,11 @@
 import { motion } from 'framer-motion'
 import { useRef, useState } from 'react'
 import { ArrowUpRight } from 'lucide-react'
+import kraftexImg from '/src/assets/kraftex.jpg'
+import sentibeatsImg from '/src/assets/sentibeats.jpg'
+import shanescafeImg from '/src/assets/shanescafe.jpg'
+import papershubImg from '/src/assets/papershub.jpg'
 
-// Store images in: src/assets/images/
-// Example paths: /src/assets/images/kraftex.jpg, /src/assets/images/sentibeats.jpg, etc.
 
 const PROJECTS = [
   {
@@ -12,7 +14,7 @@ const PROJECTS = [
     desc: 'A responsive business website developed for a real corrugated packaging company, featuring a modern interface and integrated email communication.',
     stack: ['React', 'Vite', 'Tailwind CSS', 'JavaScript'],
     gradient: 'from-cyan/30 to-indigo/10',
-    image: '/src/assets/kraftex.jpg', // Path to image
+    image: kraftexImg, 
     link: 'https://kraftexweb.vercel.app/' // Project link
   },
   {
@@ -21,7 +23,7 @@ const PROJECTS = [
     desc: 'An emotion-aware music player that uses facial expression recognition and a trained AI model to recommend music based on the listener\'s detected emotion.',
     stack: ['React', 'Python', 'Flask', 'AI/ML'],
     gradient: 'from-purple/30 to-pink/10',
-    image: '/src/assets/sentibeats.jpg',
+    image: sentibeatsImg,
     link: 'https://sentibeats.example.com'
   },
   {
@@ -30,7 +32,7 @@ const PROJECTS = [
     desc: 'A responsive cafe website with a warm rustic aesthetic, clean menu tables, earthy tones, and subtle interactive effects.',
     stack: ['HTML', 'CSS', 'JavaScript'],
     gradient: 'from-amber/30 to-orange/10',
-    image: '/src/assets/shanescafe.jpg',
+    image: shanescafeImg,
     link: 'https://github.com/Shane-HCode/Cafe-webpage.git'
   },
   {
@@ -39,7 +41,7 @@ const PROJECTS = [
     desc: 'A multilingual A/L past paper management platform designed to help Sri Lankan students easily access and organize examination resources.',
     stack: ['React', 'PHP', 'MySQL'],
     gradient: 'from-indigo/30 to-cyan/10',
-    image: '/src/assets/papershub.jpg',
+    image: papershubImg,
     link: 'https://papershub.example.com'
   },
 ]
