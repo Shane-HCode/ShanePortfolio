@@ -9,10 +9,10 @@ const TIMELINE = [
   },
 
   {
-    role: 'BCS Higher Education Qualification – Postgraduate Diploma',
+    role: 'BCS Higher Education Qualification – PGD in IT',
     company: 'British Computer Society (BCS)',
     period: 'Completed 2026',
-    desc: 'Completed the BCS Higher Education Qualification Postgraduate Diploma, strengthening my foundation in computing and software development.',
+    desc: 'Completed the BCS Higher Education Qualification Professional Graduate Diploma, strengthening my foundation in computing and software development.',
   },
 
   {
