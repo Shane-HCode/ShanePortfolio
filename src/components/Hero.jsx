@@ -68,8 +68,8 @@ export default function Hero() {
           <a href="#work" className="md:text-xl lg:text-sm btn-glow">
             View my work
           </a>
-          <a href="/ShaneHenricus-CV.pdf" download className="md:text-xl lg:text-sm btn-ghost">
-            Download CV
+          <a href="/ShaneHenricus-CV.pdf" target="_blank" rel="noopener noreferrer" className="md:text-xl lg:text-sm btn-ghost">
+            View CV
           </a>
         </motion.div>
       </motion.div>
