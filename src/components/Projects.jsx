@@ -33,7 +33,7 @@ const PROJECTS = [
     stack: ['HTML', 'CSS', 'JavaScript'],
     gradient: 'from-amber/30 to-orange/10',
     image: shanescafeImg,
-    link: 'https://github.com/Shane-HCode/Cafe-webpage.git'
+    link: 'https://shanes-cafe.vercel.app/'
   },
   {
     title: 'PapersHub.SL',
